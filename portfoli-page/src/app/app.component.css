@@ -1,0 +1,67 @@
+@font-face {
+    font-family: Inter;
+    src: url(../assets/font/inter/inter-v18-latin-regular.woff2);
+}
+@font-face {
+    font-family: Inter-600;
+    src: url(../assets/font/inter/inter-v18-latin-600.woff2);
+}
+
+.main{
+    background-color:#161C3E;
+    font-family: Inter;
+}
+.start{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 50%;
+}
+
+.intro h1{
+    font-family: Inter-600;
+    font-weight: bold;
+    font-size: 100px;
+}
+
+h1 span {
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+}
+
+/* Schatten-Styling */
+h1 span::after {
+    content: 'Mako';
+    position: absolute;
+    top: 10px;       /* Verschiebung nach unten */
+    left: 5px;      /* Verschiebung nach rechts */
+    color: rgba(0, 0, 0, 0); /* Transparente Füllung */
+    -webkit-text-stroke: 3px black; /* Schwarze Outline */
+    z-index: -1;     /* Schatten hinter den Haupttext legen */
+}
+
+.intro h1,p{
+    color: white;
+}
+
+
+
+button{
+    background-color: white;
+    outline: black;
+    position: relative;
+    padding: 10px;
+    font-size: 30px;
+    box-shadow: none;
+}
