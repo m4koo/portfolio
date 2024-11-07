@@ -55,8 +55,6 @@ h1 span::after {
     color: white;
 }
 
-
-
 button{
     background-color: white;
     outline: black;
@@ -65,3 +63,32 @@ button{
     font-size: 30px;
     box-shadow: none;
 }
+
+a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+/* Pseudo-Element für die Unterstreichung */
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Abstand unter dem Text */
+    width: 0;
+    height: 3px; /* Dicke der Unterstreichung */
+    background-color: white; /* Farbe der Unterstreichung */
+    transition: width 0.3s ease; /* Animationsdauer und Timing */
+  }
+  
+  /* Hover-Effekt */
+  a:hover::after {
+    width: 100%; /* Volle Breite beim Hover */
+  }
