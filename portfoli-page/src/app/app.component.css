@@ -41,7 +41,7 @@
     justify-content: space-between;
     align-items: baseline;
     height: 50%;
-    margin-bottom: auto;
+    margin-bottom: 100px;
 }
 
 .intro h1{
@@ -88,9 +88,10 @@ a{
 
 nav{
     display: flex;
-    width: 50%;
+    width: 100%;
+    font-size: 22px;
     justify-content: space-between;
-    margin: auto 0;
+    margin: 100px 0;
 }
 
 /* Pseudo-Element für die Unterstreichung */
@@ -127,3 +128,7 @@ a::after {
     height: 250px;
     top: 100px;
   } */
+
+  .intro p{
+    font-size: 22px;
+  }
