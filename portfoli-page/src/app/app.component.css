@@ -8,7 +8,7 @@
 }
 
 .main{
-    background-color:#161C3E;
+    background-color: 	#1e1e1e;
     font-family: Inter;
     height: 100vh;
     width: 100vw;
@@ -20,11 +20,19 @@
     display: flex;
     height: 90%;
     width: 90%;
+    overflow: hidden;
+    border: 2px solid #FFFFFF;
+    padding-left: 100px;
+}
+
+.info{
+    height: 100%;
+    width: 50%;
+    display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
-    border: 5px solid black;
-    margin: 0px;
+    align-items: flex-start;
+
 }
 
 .intro{
@@ -33,6 +41,7 @@
     justify-content: space-between;
     align-items: baseline;
     height: 50%;
+    margin-bottom: auto;
 }
 
 .intro h1{
@@ -80,7 +89,8 @@ a{
 nav{
     display: flex;
     width: 50%;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: auto 0;
 }
 
 /* Pseudo-Element für die Unterstreichung */
@@ -99,3 +109,21 @@ a::after {
   a:hover::after {
     width: 100%; /* Volle Breite beim Hover */
   }
+
+  .logo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  .logo #full-logo{
+    height: 110%;
+  }
+
+  /* .logo #top-line{
+    position: absolute;
+    height: 250px;
+    top: 100px;
+  } */
