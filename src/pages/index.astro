@@ -1,8 +1,58 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
 <BaseLayout>
-  <h1 class="text-3xl font-bold text-blue-600">Willkommen auf meinem Portfolio!</h1>
-  <p>Hier entsteht mein neues Showcase-Projekt.</p>
+  <!-- Hero-Sektion: Der erste Eindruck -->
+  <section class="py-12 md:py-20">
+    <div class="max-w-3xl">
+      <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-3 block">
+        Junior Webentwickler & Quereinsteiger
+      </span>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight mb-6 leading-tight">
+        Hallo, ich bin Mahmut. Ich baue moderne Webanwendungen mit Fokus auf Clean Code.
+      </h1>
+      <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+        Hier zeige ich meine Projekte, meinen Tech-Stack und meinen Weg in die professionelle Webentwicklung. Lass uns gemeinsam digitale Erlebnisse gestalten.
+      </p>
+      
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4">
+        <a href="/projects" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 transition-colors shadow-sm hover:shadow">
+          Projekte ansehen &rarr;
+        </a>
+        <a href="/contact" class="px-6 py-3 bg-white border border-slate-300 text-slate-700 font-medium rounded-xl hover:bg-slate-50 transition-colors">
+          Kontakt aufnehmen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kleine Vorschau-Sektion für Top-Projekte -->
+  <section class="border-t border-slate-200 pt-12 pb-16">
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-2xl font-bold text-slate-800">Ausgewählte Projekte</h2>
+      <a href="/projects" class="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors">
+        Alle anzeigen &rarr;
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <ProjectCard 
+        title="Task-Manager (Beispiel)"
+        description="Eine interaktive Kanban-Board-Anwendung zur Verwaltung von täglichen Aufgaben."
+        tech="React, Tailwind"
+        githubUrl="https://github.com"
+        imageUrl="https://via.placeholder.com/600x400/f8fafc/334155?text=Task+Manager+Screenshot"
+      />
+      <ProjectCard 
+        title="Wetter-App (Beispiel)"
+        description="Ein Dashboard, das Wetterdaten einer externen API abruft und grafisch darstellt."
+        tech="JavaScript, API"
+        githubUrl="https://github.com"
+        imageUrl="https://via.placeholder.com/600x400/f8fafc/334155?text=Wetter+App+Screenshot"
+      />
+    </div>
+  </section>
 </BaseLayout>
