@@ -1,0 +1,10 @@
+---
+const { name, level } = Astro.props;
+---
+
+<div class="flex items-center justify-between p-3 bg-white border border-slate-200 rounded-lg shadow-sm">
+  <span class="font-medium text-slate-800">{name}</span>
+  <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full font-semibold">
+    {level}
+  </span>
+</div>
