@@ -8,9 +8,15 @@ import Navigation from '../components/Navigation.astro';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mahmut Kalem | Web Dev</title>
   </head>
-  <body>
+
+  <body class="bg.slate-50 min-h-screen">
+
     <Navigation />
-    <!-- Hier wird der Inhalt der jeweiligen Seite "reingesteckt" -->
-    <slot />
+    <main class="max-w-5xl mx-auto px-4 md:px-8 pb-12 pt-8">
+        <!-- content -->
+        <slot />
+    </main>
+ 
+
   </body>
 </html>

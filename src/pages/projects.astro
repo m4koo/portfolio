@@ -1,8 +1,31 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
 <BaseLayout>
-  <h1>Meine Projekte</h1>
-  <p>Hier präsentiere ich mein Projekt-Portfolio.</p>
+  <h1 class="text-3xl font-bold text-slate-800 mb-6">Meine Projekte</h1>
+  <p class="text-slate-600 mb-8">
+    Hier präsentiere ich mein Projekt-Portfolio und zeige, welche Technologien ich angewendet habe.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    <ProjectCard 
+      title="Task-Manager (Beispiel)"
+      description="Eine interaktive Kanban-Board-Anwendung zur Verwaltung von täglichen Aufgaben."
+      tech="React, Tailwind"
+      githubUrl="https://github.com"
+      imageUrl="https://via.placeholder.com/600x400/f8fafc/334155?text=Task+Manager+Screenshot"
+    />
+
+    <ProjectCard 
+      title="Wetter-App (Beispiel)"
+      description="Ein Dashboard, das Wetterdaten einer externen API abruft und grafisch darstellt."
+      tech="JavaScript, API"
+      githubUrl="https://github.com"
+      imageUrl="https://via.placeholder.com/600x400/f8fafc/334155?text=Wetter+App+Screenshot"
+    />
+
+  </div>
 </BaseLayout>

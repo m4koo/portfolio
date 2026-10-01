@@ -1,0 +1,32 @@
+---
+// Hier definieren wir, welche Daten die Karte empfangen kann
+const { title, description, tech, githubUrl, imageUrl } = Astro.props;
+---
+
+<!-- 'overflow-hidden' sorgt dafür, dass das Bild oben an den runden Ecken sauber abgeschnitten wird -->
+<div class="border border-slate-200 rounded-xl overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300">
+  
+  <img 
+    src={imageUrl} 
+    alt={`Screenshot von ${title}`} 
+    class="w-full h-48 object-cover border-b border-slate-200" 
+  />
+  
+  <div class="p-6">
+    <h3 class="text-xl font-bold text-slate-800 mb-2">{title}</h3>
+    
+    <p class="text-slate-600 mb-4">
+      {description}
+    </p>
+    
+    <div class="mb-6">
+      <span class="inline-block bg-slate-100 text-slate-700 text-sm px-3 py-1 rounded-full font-medium">
+        {tech}
+      </span>
+    </div>
+    
+    <a href={githubUrl} target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold transition-colors">
+      GitHub ansehen &rarr;
+    </a>
+  </div>
+</div>
