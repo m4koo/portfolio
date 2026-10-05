@@ -1,9 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-
-// Hier importieren wir dein neues Bild direkt über Astro
 import myPhoto from '../pics/photo/itsame.jpeg';
+import pokedexImg from '../pics/project-img/pokedex.svg';
 ---
 
 <BaseLayout>
@@ -60,12 +59,14 @@ import myPhoto from '../pics/photo/itsame.jpeg';
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <ProjectCard 
-        title="Task-Manager (Beispiel)"
-        description="Eine interaktive Kanban-Board-Anwendung zur Verwaltung von täglichen Aufgaben."
-        tech="React, Tailwind"
-        githubUrl="https://github.com"
-        imageUrl="https://via.placeholder.com/600x400/0f172a/334155?text=Task+Manager+Screenshot"
+        title="Pokédex"
+        description="Eine interaktive Web-Anwendung zur Suche und Anzeige detaillierter Pokémon-Daten."
+        tech="JavaScript, API"
+        githubUrl="https://m4koo.github.io/Pokedex/"
+        imageUrl={pokedexImg.src}
       />
+
+      <!-- Die zweite Karte lassen wir vorerst als Platzhalter -->
       <ProjectCard 
         title="Wetter-App (Beispiel)"
         description="Ein Dashboard, das Wetterdaten einer externen API abruft und grafisch darstellt."
