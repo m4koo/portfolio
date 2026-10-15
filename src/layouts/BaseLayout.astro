@@ -1,22 +1,29 @@
 ---
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Portfolio von Mahmut Kalem, Junior Webentwickler mit Fokus auf Clean Code.',
+} = Astro.props;
 ---
 <html lang="de">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mahmut Kalem | Web Dev</title>
+    <meta name="description" content={description} />
+    <title>{title} | Mahmut Kalem</title>
   </head>
 
-  <body class="bg.slate-50 min-h-screen">
-
+  <body class="min-h-screen">
     <Navigation />
     <main class="max-w-5xl mx-auto px-4 md:px-8 pb-12 pt-8">
-        <!-- content -->
-        <slot />
+      <slot />
     </main>
- 
-
   </body>
 </html>
